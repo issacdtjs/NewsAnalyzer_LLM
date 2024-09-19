@@ -1,1 +1,24 @@
+name: Run Python Script
 
+on:
+  workflow_dispatch:
+
+env:
+  API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Run Python Script
+        run: |
+          python main.py
+          
