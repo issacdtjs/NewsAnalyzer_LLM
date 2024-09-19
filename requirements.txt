@@ -7,5 +7,5 @@ faiss-cpu==1.8.0
 libmagic==1.0
 python-magic==0.4.27
 OpenAI == 0.28.0
-langchain-community==0.2.16
-langchain-openai==0.1.23
+langchain-community==0.0.28
+langchain-openai==0.0.8
