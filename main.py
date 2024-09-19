@@ -15,7 +15,9 @@ from langchain_community.vectorstores import FAISS
 #os.environ['OPENAI_API_KEY'] = os.getenv("MY_SECRET_KEY")
 
 # Retrieve the secret key from the environment
-my_secret_key = os.getenv("MY_SECRET_KEY")
+#my_secret_key = os.getenv("MY_SECRET_KEY")
+
+my_secret_key = os.environ['MY_SECRET_KEY']
 
 if my_secret_key:
     os.environ['OPENAI_API_KEY'] = my_secret_key
