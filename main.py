@@ -12,7 +12,7 @@ from langchain_community.vectorstores import FAISS
 #load_dotenv()  # take environment variables from .env (especially openai api key)
 
 # Access the secret key from the environment
-secret_key = os.getenv("MY_SECRET_KEY")
+os.getenv("MY_SECRET_KEY")
 
 st.title("NeoBot: News Analyzer Tool 📈")
 st.sidebar.title("News Article URLs")
