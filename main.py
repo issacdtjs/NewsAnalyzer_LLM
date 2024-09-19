@@ -12,7 +12,15 @@ from langchain_community.vectorstores import FAISS
 #load_dotenv()  # take environment variables from .env (especially openai api key)
 
 # Access the secret key from the environment
-os.environ['OPENAI_API_KEY'] = os.getenv("MY_SECRET_KEY")
+#os.environ['OPENAI_API_KEY'] = os.getenv("MY_SECRET_KEY")
+
+# Retrieve the secret key from the environment
+my_secret_key = os.getenv("MY_SECRET_KEY")
+
+if my_secret_key:
+    os.environ['OPENAI_API_KEY'] = my_secret_key
+else:
+    raise ValueError("MY_SECRET_KEY environment variable is not set or is None")
 
 st.title("NeoBot: News Analyzer Tool 📈")
 st.sidebar.title("News Article URLs")
