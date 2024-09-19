@@ -21,6 +21,6 @@ jobs:
 
     - name: Run Python script
       env:
-        MY_SECRET_KEY: ${{ secrets.OPENAI_API_KEY }}  # Pass the secret to the environment
+        MY_SECRET_KEY: ${{ secrets.MY_SECRET_KEY }}  # Pass the secret to the environment
       run: |
         python main.py
