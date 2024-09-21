@@ -8,12 +8,6 @@ from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
-#from dotenv import load_dotenv
-#load_dotenv()  # take environment variables from .env (especially openai api key)
-
-# Access the secret key from the environment
-#os.environ['OPENAI_API_KEY'] = os.getenv("MY_SECRET_KEY")
-
 # Retrieve the secret key
 my_secret_key = st.secrets["MY_SECRET_KEY"]
 
